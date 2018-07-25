@@ -4,7 +4,7 @@ project(bulk_server VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 find_package (Boost)
 find_package (Threads REQUIRED)
 
-add_executable(bulk_server hw12.cpp async.cpp)
+add_executable(bulk_server hw12.cpp async.cpp async.h CommandProcessor.h)
 
 set_target_properties(
 	bulk_server PROPERTIES
