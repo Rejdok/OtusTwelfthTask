@@ -1,4 +1,4 @@
-#include "CommandProcessor.h"
+п»ї#include "CommandProcessor.h"
 
 #include <map>
 #include <queue>
@@ -78,7 +78,7 @@ namespace async{
 	private:
 		size_t maxConnections = maxConnections;
 		std::shared_ptr<std::mutex> coutMutex;
-		//Возможно стоит сделать отдельной структурой
+		//Р’РѕР·РјРѕР¶РЅРѕ СЃС‚РѕРёС‚ СЃРґРµР»Р°С‚СЊ РѕС‚РґРµР»СЊРЅРѕР№ СЃС‚СЂСѓРєС‚СѓСЂРѕР№
 		std::map<handle_t, CommandsProcessor*> registredHandles;
 		std::map<handle_t, std::queue<std::string>> inputMessagesQueue;
 		std::map<handle_t, std::string> inputBuf;
