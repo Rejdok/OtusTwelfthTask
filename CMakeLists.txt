@@ -1,7 +1,7 @@
 ﻿cmake_minimum_required(VERSION 3.2)
 
 project(bulk_server VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
-find_package (Boost)
+find_package (Boost REQUIRED system)
 find_package (Threads REQUIRED)
 
 add_executable(bulk_server Hw12.cpp async.cpp async.h CommandProcessor.h)
@@ -12,7 +12,7 @@ set_target_properties(
 	CXX_STANDARD_REQUIRED ON
 	COMPILE_OPTIONS -Wpedantic -Wall -Wextra
 )
-target_link_libraries (bulk_server Threads::Threads)
+target_link_libraries (bulk_server Threads::Threads Boost::system)
 install(TARGETS bulk_server RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR "DEB")
