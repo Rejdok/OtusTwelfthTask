@@ -1,4 +1,4 @@
-﻿#include "stdafx.h"
+﻿
 #include "CommandProcessor.h"
 #include "async.h"
 #include <map>
