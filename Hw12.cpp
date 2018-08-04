@@ -31,6 +31,7 @@ public:
 				async::receive(handle,data_, length);
 				doReadCommand();
 			} else{
+				async::disconnect(handle);
 				std::cout << ec.message()<<std::endl;
 			}
 		});
